@@ -52,12 +52,12 @@ const PARTY_DATA = {
     { id: "rose",    name: "Rose Griffin",            photo: "photos/rose.jpeg"    },
     { id: "caleb",   name: "Caleb Liu",               photo: "photos/caleb.png"    },
     { id: "james",   name: "James Clark",             photo: ""                    },
-    { id: "hayden",  name: "Hayden Gibson",            photo: ""                    },
+    { id: "hayden",  name: "Hayden Gibson",            photo: "photos/hayden.jpeg"  },
     { id: "kimberly",name: "Kimberly Wang",            photo: ""                    },
     { id: "prital",  name: "Prital",                  photo: ""                    },
     { id: "tyler",   name: "Tyler",                   photo: ""                    },
     { id: "logan",   name: "Logan",                   photo: ""                    },
-    { id: "hairam",  name: "Hairam Ramos",             photo: ""                    },
+    { id: "hairam",  name: "Hairam Ramos",             photo: "photos/hairam.jpeg"  },
     { id: "meagan",  name: "Meagan Campbell",          photo: ""                    },
     { id: "jessica", name: "Jessica Le",               photo: ""                    },
     { id: "diego",   name: "Diego Santiago",           photo: ""                    },
@@ -165,6 +165,22 @@ const PARTY_DATA = {
     {
       fact: "I got 4 tubs of apple sauce for christmas one year cause I love applesauce",
       guestId: "caleb",
+    },
+    {
+      fact: "I can dance salsa.",
+      guestId: "hairam",
+    },
+    {
+      fact: "I am great at naming flags.",
+      guestId: "hairam",
+    },
+    {
+      fact: "White boy has some Thai in him.",
+      guestId: "hayden",
+    },
+    {
+      fact: "I know how to safely make a gasoline explosion.",
+      guestId: "hayden",
     }
   ],
 
@@ -227,7 +243,7 @@ const PARTY_DATA = {
           { question: "Composed of sodium and chlorine, this common kitchen seasoning is famously the only rock regularly consumed by humans.", answer: "Salt" },
           { question: "In 2006, this icy celestial body at the outer edge of our solar system was controversially demoted to a \"dwarf planet.\"", answer: "Pluto" },
           { question: "Translating literally to \"empty orchestra\" in Japanese, this popular late-night activity involves grabbing a microphone and belting out hits to pre-recorded tracks.", answer: "Karaoke" },
-          { question: "Before getting her \"driver's license\" and spilling her GUTS on two massive pop-rock albums, this superstar got her start acting in a hit Disney+ series.", answer: "Olivia Rodrigo" },
+          { question: "Before spilling her \"GUTS\" on two massive pop-rock albums, this superstar got her start acting in a hit Disney+ series.", answer: "Olivia Rodrigo" },
           { question: "In web development, receiving an HTTP status code of exactly this number indicates a general \"Bad Request,\" while adding a \"4\" to the end gives you the infamous \"Not Found\" error.", answer: "400" },
         ],
       },

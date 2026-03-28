@@ -1,5 +1,20 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 
+function GuestThumb({ guest }) {
+  const [errored, setErrored] = useState(false)
+  if (!guest.photo || errored) {
+    return <span className="panel-guest-placeholder">👤</span>
+  }
+  return (
+    <img
+      className="panel-guest-photo"
+      src={guest.photo}
+      alt={guest.name}
+      onError={() => setErrored(true)}
+    />
+  )
+}
+
 function RevealPhoto({ photo, name }) {
   const [errored, setErrored] = useState(false)
 
@@ -92,7 +107,23 @@ export default function Facts({ facts, guests }) {
         <p className="section-sub">Read the clue — guess the guest — then reveal</p>
       </div>
 
-      <div className="facts-wrap">
+      <div className="facts-layout">
+
+        <aside className="facts-panel">
+          <div className="facts-panel-title">Guests</div>
+          <div className="facts-panel-grid">
+            {guests.map(g => (
+              <div key={g.id} className="facts-panel-guest">
+                <div className="facts-panel-photo-wrap">
+                  <GuestThumb guest={g} />
+                </div>
+                <span className="facts-panel-name">{g.name}</span>
+              </div>
+            ))}
+          </div>
+        </aside>
+
+        <div className="facts-wrap">
         <div className="fact-card">
 
           <div className="fact-meta">{idx + 1} of {order.length}</div>
@@ -129,8 +160,10 @@ export default function Facts({ facts, guests }) {
 
         </div>
 
-        <button className="btn btn-text" onClick={shuffle}>🔀 Shuffle order</button>
-      </div>
+          <button className="btn btn-text" onClick={shuffle}>🔀 Shuffle order</button>
+        </div>
+
+      </div>{/* facts-layout */}
     </section>
   )
 }
