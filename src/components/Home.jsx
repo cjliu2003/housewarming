@@ -1,8 +1,7 @@
 export default function Home({ site, navigate }) {
   const cards = [
-    { id: 'guests',   icon: '👥', label: 'Guests',    desc: "Who's here tonight"          },
-    { id: 'facts',    icon: '🕵️', label: 'Who Am I?', desc: 'Guess the guest from clues'  },
-    { id: 'jeopardy', icon: '🎯', label: 'Jeopardy!', desc: 'The classic trivia showdown' },
+    { id: 'guests', icon: '👥', label: 'Guests', desc: "Who's here tonight"          },
+    { id: 'trivia', icon: '🎯', label: 'Trivia',  desc: 'Questions, clues & leaderboard' },
   ]
 
   return (

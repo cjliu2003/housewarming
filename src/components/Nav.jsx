@@ -1,9 +1,8 @@
 export default function Nav({ section, navigate, title }) {
   const links = [
-    { id: 'home',     label: 'Home'      },
-    { id: 'guests',   label: 'Guests'    },
-    { id: 'facts',    label: 'Who Am I?' },
-    { id: 'jeopardy', label: 'Jeopardy'  },
+    { id: 'home',   label: 'Home'   },
+    { id: 'guests', label: 'Guests' },
+    { id: 'trivia', label: 'Trivia' },
   ]
 
   return (

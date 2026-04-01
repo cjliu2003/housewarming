@@ -3,8 +3,7 @@ import PARTY_DATA from './data'
 import Nav from './components/Nav'
 import Home from './components/Home'
 import Guests from './components/Guests'
-import Facts from './components/Facts'
-import Jeopardy from './components/Jeopardy'
+import Trivia from './components/Trivia'
 import PasswordGate from './components/PasswordGate'
 
 export default function App() {
@@ -33,10 +32,9 @@ export default function App() {
     <>
       <Nav section={section} navigate={setSection} title={site.title} />
 
-      {section === 'home'     && <Home     site={site}     navigate={setSection} />}
-      {section === 'guests'   && <Guests   guests={guests}                       />}
-      {section === 'facts'    && <Facts    facts={facts}   guests={guests}       />}
-      {section === 'jeopardy' && <Jeopardy jeopardy={jeopardy}                  />}
+      {section === 'home'   && <Home   site={site} navigate={setSection} />}
+      {section === 'guests' && <Guests guests={guests} />}
+      {section === 'trivia' && <Trivia jeopardy={jeopardy} guests={guests} />}
     </>
   )
 }
